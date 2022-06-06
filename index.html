@@ -1,0 +1,57 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente</title>
+    
+</head>
+<body>
+    <button onclick="estrangeira()" style="border-radius: 5px; border-color: white; width: 200px;  height: 30px; background-color: rgb(31, 29, 29); color: white; border-color: rgb(29, 151, 29); border-width: 5px;">Pessoa Estrangeira</button>
+    <button onclick="fisica()" style="border-radius: 5px; border-color: white; width: 200px;  height: 30px; background-color: rgb(31, 29, 29); color: white; border-color: rgb(29, 151, 29); border-width: 5px;">Pessoa Física</button>
+    <button onclick="juridica()" style="border-radius: 5px; border-color: white; width: 200px;  height: 30px; background-color: rgb(31, 29, 29); color: white; border-color: rgb(29, 151, 29); border-width: 5px;">Pessoa jurídica</button>
+
+    <h1>Digite seus dados</h1>
+
+    <form action="novoPessoa.php" method="POST">
+
+        <div id="pessoa" style="display: none">
+            <h1>Nome
+            <input type="text" name="nome" size="15"></h1>
+            <h1>Sobrenome
+            <input type="text" name="sobrenome" size="15"></h1>
+            <h1>Telefone
+            <input type="number" name="telefone" size="15"></h1>
+        </div>
+
+        <div id="estrangeira" style="display: none">
+            <h1>Número do passaporte
+            <input type="text" name="numPassaporte" size="15"></h1>
+            <h1>País de origem
+            <input type="text" name="paisOrigem" size="15"></h1>
+        </div>
+
+        <div id="fisica" style="display: none">
+            <h1>CPF
+            <input type="text" name="cpf" size="15" pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})"></h1>
+            <h1>Email
+            <input type="text" name="email" size="15"></h1>
+            <h1>Data de nascimento
+            <input type="text" name="dataNasc" size="15"></h1>
+        </div>
+
+        <div id="juridica" style="display: none">
+            <h1>CNPJ
+            <input type="text" name="cnpj" size="15"></h1>
+            <h1>Faturamento
+            <input type="text" name="faturamento" size="15"></h1>
+        </div>
+
+        <button id="button" value="none" name="button" style="display: none; border-radius: 5px; border-color: white; width: 200px;  height: 30px; background-color: rgb(31, 29, 29); color: white; border-color: rgb(29, 151, 29); border-width: 5px;">Enviar</button>
+        <br>
+    </form>
+
+    <script src="input.js"></script>
+</body>
+</html>
